@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aprenda sobre segurança de dados e proteja suas informações pessoais e corporativas">
+    <title>Segurança de Dados para Todos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-8z"></path>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        <polyline points="9 15 11 17 15 13"></polyline>
+    </svg>
+    <span class="logo-text"><strong>SDT</strong></span>
+</div>
+
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Início</a></li>
+                <li><a href="#start-here" class="nav-link">Comece Aqui</a></li>
+                <li><a href="#concepts" class="nav-link">Conceitos</a></li>
+                <li><a href="#practices" class="nav-link">Boas Práticas</a></li>
+                <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Segurança de Dados para Todos</h1>
+                <p class="hero-subtitle">Proteja suas informações pessoais e corporativas com conhecimento e boas práticas</p>
+                <div class="hero-buttons">
+                    <a href="#concepts" class="btn btn-primary">Começar a Aprender</a>
+                    <a href="#practices" class="btn btn-secondary">Ver Práticas</a>
+                </div>
+            </div>
+            <div class="hero-illustration">
+                <svg viewBox="0 0 400 300" fill="none">
+                    <rect x="100" y="120" width="200" height="140" rx="10" fill="var(--primary-light)" opacity="0.2"/>
+                    <rect x="110" y="130" width="180" height="120" rx="8" fill="var(--primary)" opacity="0.1"/>
+                    <circle cx="200" cy="150" r="40" fill="var(--primary)" opacity="0.3"/>
+                    <path d="M200 130 L200 145 M185 150 L200 165 L215 150" stroke="var(--primary)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <rect x="180" y="180" width="40" height="50" rx="5" fill="var(--accent)" opacity="0.3"/>
+                    <path d="M190 180 L190 170 C190 160 210 160 210 170 L210 180" stroke="var(--accent)" stroke-width="3" fill="none"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Start Here Section for Beginners -->
+    <section id="start-here" class="start-here">
+        <div class="container">
+            <div class="section-header">
+                <h2>🎯 Guia para Iniciantes</h2>
+                <p>Nunca estudou segurança de dados? Sem problemas! Vamos começar do básico com exemplos do dia a dia.</p>
+            </div>
+            
+            <div class="beginner-intro">
+                <h3>O que é Segurança de Dados em Palavras Simples?</h3>
+                <p class="intro-text">Imagine que suas informações digitais (senhas, fotos, documentos, mensagens) são como objetos valiosos dentro da sua casa. <strong>Segurança de dados</strong> é como trancar as portas, instalar alarmes e ter cópias das chaves em lugares seguros. É proteger o que é seu no mundo digital!</p>
+            </div>
+
+            <div class="analogy-grid">
+                <div class="analogy-card">
+                    <div class="analogy-icon">🏠</div>
+                    <h4>Senha = Chave da Casa</h4>
+                    <p><strong>No mundo real:</strong> Você não usa a mesma chave para casa, carro e trabalho, certo?</p>
+                    <p><strong>No mundo digital:</strong> Cada site/app deve ter uma senha diferente e forte. Se alguém descobrir uma, as outras continuam seguras!</p>
+                    <div class="example-box">
+                        <strong>Exemplo prático:</strong> Use senhas diferentes para Instagram, e-mail e banco. Se hackearem seu Instagram, seu banco continua protegido.
+                    </div>
+                </div>
+
+                <div class="analogy-card">
+                    <div class="analogy-icon">🚪</div>
+                    <h4>2FA = Duas Chaves para Abrir a Porta</h4>
+                    <p><strong>No mundo real:</strong> Alguns cofres precisam de duas chaves diferentes para abrir.</p>
+                    <p><strong>No mundo digital:</strong> Além da senha, você precisa de um código do celular. Mesmo que roubem sua senha, não conseguem entrar sem seu celular!</p>
+                    <div class="example-box">
+                        <strong>Exemplo prático:</strong> Ao entrar no WhatsApp Web, ele pede para escanear um código no celular. Isso é 2FA!
+                    </div>
+                </div>
+
+                <div class="analogy-card">
+                    <div class="analogy-icon">✉️</div>
+                    <h4>Criptografia = Carta em Envelope Lacrado</h4>
+                    <p><strong>No mundo real:</strong> Você coloca uma carta em um envelope lacrado para que só o destinatário leia.</p>
+                    <p><strong>No mundo digital:</strong> Suas mensagens são "embaralhadas" e só quem deve ler consegue "desembaralhar".</p>
+                    <div class="example-box">
+                        <strong>Exemplo prático:</strong> Mensagens do WhatsApp têm um cadeado. Isso significa que nem o WhatsApp consegue ler suas conversas!
+                    </div>
+                </div>
+
+                <div class="analogy-card">
+                    <div class="analogy-icon">🎣</div>
+                    <h4>Phishing = Golpista Disfarçado</h4>
+                    <p><strong>No mundo real:</strong> Alguém se veste de funcionário do banco para entrar na sua casa e roubar.</p>
+                    <p><strong>No mundo digital:</strong> E-mails ou mensagens falsas fingindo ser do banco, Netflix, etc., para roubar suas senhas.</p>
+                    <div class="example-box">
+                        <strong>Exemplo prático:</strong> Recebeu e-mail dizendo "Sua conta será bloqueada, clique aqui"? Provavelmente é golpe! Bancos não pedem senhas por e-mail.
+                    </div>
+                </div>
+
+                <div class="analogy-card">
+                    <div class="analogy-icon">📦</div>
+                    <h4>Backup = Cópia de Documentos Importantes</h4>
+                    <p><strong>No mundo real:</strong> Você tira cópia de documentos importantes e guarda em outro lugar.</p>
+                    <p><strong>No mundo digital:</strong> Fazer cópias das suas fotos, arquivos e documentos em outro lugar (HD externo, nuvem).</p>
+                    <div class="example-box">
+                        <strong>Exemplo prático:</strong> Suas fotos do celular também ficam no Google Fotos. Se perder o celular, não perde as fotos!
+                    </div>
+                </div>
+
+                <div class="analogy-card">
+                    <div class="analogy-icon">🦠</div>
+                    <h4>Vírus = Doença no Computador</h4>
+                    <p><strong>No mundo real:</strong> Vírus deixa você doente e pode passar para outras pessoas.</p>
+                    <p><strong>No mundo digital:</strong> Programas maliciosos que "infectam" seu computador, roubam dados ou travam tudo.</p>
+                    <div class="example-box">
+                        <strong>Exemplo prático:</strong> Baixou um programa "grátis" de site duvidoso e agora o PC está lento e cheio de propagandas? Pode ser vírus!
+                    </div>
+                </div>
+            </div>
+
+            <div class="quick-start-actions">
+                <h3>🚀 3 Ações Simples para Começar AGORA</h3>
+                <div class="action-cards">
+                    <div class="action-card priority-high">
+                        <div class="priority-badge">Prioridade Alta</div>
+                        <h4>1. Ative 2FA no seu E-mail</h4>
+                        <p>Seu e-mail é a porta de entrada para tudo. Se alguém invadir seu e-mail, pode resetar senhas de outros sites.</p>
+                        <ul>
+                            <li>Gmail: Configurações → Segurança → Verificação em duas etapas</li>
+                            <li>Outlook: Configurações → Segurança → Verificação em duas etapas</li>
+                        </ul>
+                    </div>
+                    <div class="action-card priority-medium">
+                        <div class="priority-badge">Prioridade Média</div>
+                        <h4>2. Mude Senhas Fracas</h4>
+                        <p>Tem senha tipo "123456" ou "nome123"? Mude agora! Use pelo menos 12 caracteres misturando letras, números e símbolos.</p>
+                        <p><strong>Dica:</strong> Crie uma frase e use as primeiras letras. Ex: "Meu cachorro Rex tem 5 anos!" = McRt5a!</p>
+                    </div>
+                    <div class="action-card priority-low">
+                        <div class="priority-badge">Prioridade Baixa</div>
+                        <h4>3. Faça Backup das Fotos</h4>
+                        <p>Ative o backup automático de fotos no Google Fotos (Android) ou iCloud (iPhone). Assim, se perder o celular, suas memórias estão salvas!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="common-mistakes">
+                <h3>❌ Erros Comuns que Você Deve Evitar</h3>
+                <div class="mistakes-grid">
+                    <div class="mistake-item">
+                        <span class="mistake-icon">❌</span>
+                        <p><strong>Usar a mesma senha em tudo</strong><br>Se descobrirem uma, descobriram todas!</p>
+                    </div>
+                    <div class="mistake-item">
+                        <span class="mistake-icon">❌</span>
+                        <p><strong>Clicar em links de e-mails suspeitos</strong><br>Sempre digite o endereço do site manualmente.</p>
+                    </div>
+                    <div class="mistake-item">
+                        <span class="mistake-icon">❌</span>
+                        <p><strong>Compartilhar senhas por WhatsApp</strong><br>Mensagens podem ser interceptadas ou vistas por outros.</p>
+                    </div>
+                    <div class="mistake-item">
+                        <span class="mistake-icon">❌</span>
+                        <p><strong>Não fazer backup</strong><br>"Nunca vai acontecer comigo" até acontecer!</p>
+                    </div>
+                    <div class="mistake-item">
+                        <span class="mistake-icon">❌</span>
+                        <p><strong>Usar Wi-Fi público sem cuidado</strong><br>Evite acessar banco ou fazer compras em Wi-Fi de shopping/aeroporto.</p>
+                    </div>
+                    <div class="mistake-item">
+                        <span class="mistake-icon">❌</span>
+                        <p><strong>Ignorar atualizações</strong><br>Aquele aviso chato de atualização? Ele corrige falhas de segurança!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="intro">
+        <div class="container">
+            <div class="section-header">
+                <h2>Por que a Segurança de Dados é Importante?</h2>
+                <p>No mundo digital de hoje, proteger suas informações nunca foi tão crucial</p>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3>Proteção Pessoal</h3>
+                    <p>Seus dados pessoais são valiosos. Proteja sua identidade, finanças e privacidade contra ameaças digitais.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                    </div>
+                    <h3>Segurança Corporativa</h3>
+                    <p>Empresas lidam com dados sensíveis diariamente. Uma falha pode resultar em perdas financeiras e de reputação.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="12" y1="18" x2="12" y2="12"></line>
+                            <line x1="9" y1="15" x2="15" y2="15"></line>
+                        </svg>
+                    </div>
+                    <h3>Conformidade Legal</h3>
+                    <p>Leis como a LGPD exigem que organizações protejam dados pessoais adequadamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Concepts Section -->
+    <section id="concepts" class="concepts">
+        <div class="container">
+            <div class="section-header">
+                <h2>Conceitos Básicos</h2>
+                <p>Entenda os termos fundamentais de segurança de dados</p>
+            </div>
+            <div class="concepts-list">
+                <div class="concept-item">
+                    <div class="concept-icon">🔐</div>
+                    <div class="concept-content">
+                        <h3>Criptografia</h3>
+                        <p>Processo de codificar informações para que apenas pessoas autorizadas possam acessá-las. É como transformar uma mensagem em um código secreto que só pode ser decifrado com a chave correta.</p>
+                    </div>
+                </div>
+                <div class="concept-item">
+                    <div class="concept-icon">🔑</div>
+                    <div class="concept-content">
+                        <h3>Senhas Seguras</h3>
+                        <p>Combinações fortes de caracteres (letras, números e símbolos) com pelo menos 12 caracteres. Evite informações pessoais óbvias e use senhas únicas para cada serviço.</p>
+                    </div>
+                </div>
+                <div class="concept-item">
+                    <div class="concept-icon">📱</div>
+                    <div class="concept-content">
+                        <h3>Autenticação de Dois Fatores (2FA)</h3>
+                        <p>Camada extra de segurança que requer duas formas de verificação: algo que você sabe (senha) e algo que você tem (código no celular).</p>
+                    </div>
+                </div>
+                <div class="concept-item">
+                    <div class="concept-icon">🎣</div>
+                    <div class="concept-content">
+                        <h3>Phishing</h3>
+                        <p>Tentativa de fraude onde criminosos se passam por empresas legítimas para roubar informações. Geralmente feito por e-mail, SMS ou sites falsos.</p>
+                    </div>
+                </div>
+                <div class="concept-item">
+                    <div class="concept-icon">💾</div>
+                    <div class="concept-content">
+                        <h3>Backup</h3>
+                        <p>Cópia de segurança dos seus dados armazenada em local separado. Essencial para recuperar informações em caso de perda, roubo ou ataque.</p>
+                    </div>
+                </div>
+                <div class="concept-item">
+                    <div class="concept-icon">🦠</div>
+                    <div class="concept-content">
+                        <h3>Malware</h3>
+                        <p>Software malicioso projetado para danificar, explorar ou obter acesso não autorizado a sistemas. Inclui vírus, ransomware, spyware e trojans.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Concepts Section -->
+    <section class="detailed-concepts">
+        <div class="container">
+            <div class="section-header">
+                <h2>Aprofundando nos Conceitos</h2>
+                <p>Entenda cada conceito em detalhes para aplicar melhor na prática</p>
+            </div>
+
+            <!-- Criptografia Detalhada -->
+            <div class="detailed-concept">
+                <div class="detailed-concept-header">
+                    <div class="detailed-icon">🔐</div>
+                    <h3>Criptografia em Detalhes</h3>
+                </div>
+                <div class="detailed-content">
+                    <h4>O que é e como funciona?</h4>
+                    <p>A criptografia é o processo de transformar dados legíveis (texto claro) em um formato codificado (texto cifrado) que só pode ser lido por quem possui a chave de descriptografia. É a base da segurança digital moderna.</p>
+                    
+                    <h4>Tipos de Criptografia</h4>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h5>Criptografia Simétrica</h5>
+                            <p>Usa a mesma chave para criptografar e descriptografar. É rápida e eficiente, ideal para grandes volumes de dados. Exemplos: AES, DES, 3DES.</p>
+                        </div>
+                        <div class="info-box">
+                            <h5>Criptografia Assimétrica</h5>
+                            <p>Usa um par de chaves: pública (para criptografar) e privada (para descriptografar). Mais segura para troca de informações. Exemplos: RSA, ECC.</p>
+                        </div>
+                        <div class="info-box">
+                            <h5>Hash</h5>
+                            <p>Transforma dados em uma sequência fixa de caracteres. É unidirecional (não pode ser revertido). Usado para verificar integridade. Exemplos: SHA-256, MD5.</p>
+                        </div>
+                    </div>
+
+                    <h4>Aplicações Práticas</h4>
+                    <ul class="detailed-list">
+                        <li><strong>HTTPS:</strong> Criptografa a comunicação entre seu navegador e sites</li>
+                        <li><strong>WhatsApp/Signal:</strong> Criptografia ponta-a-ponta em mensagens</li>
+                        <li><strong>VPN:</strong> Criptografa todo o tráfego de internet</li>
+                        <li><strong>Cartões de crédito:</strong> Protege transações financeiras</li>
+                        <li><strong>Armazenamento:</strong> Criptografia de disco (BitLocker, FileVault)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Senhas Seguras Detalhadas -->
+            <div class="detailed-concept">
+                <div class="detailed-concept-header">
+                    <div class="detailed-icon">🔑</div>
+                    <h3>Senhas Seguras em Detalhes</h3>
+                </div>
+                <div class="detailed-content">
+                    <h4>Características de uma Senha Forte</h4>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h5>Comprimento</h5>
+                            <p>Mínimo de 12 caracteres. Cada caractere adicional aumenta exponencialmente a segurança. Senhas de 16+ caracteres são ideais.</p>
+                        </div>
+                        <div class="info-box">
+                            <h5>Complexidade</h5>
+                            <p>Combine letras maiúsculas, minúsculas, números e símbolos. Evite padrões óbvios como "123456" ou "senha123".</p>
+                        </div>
+                        <div class="info-box">
+                            <h5>Unicidade</h5>
+                            <p>Use uma senha diferente para cada conta. Se uma for comprometida, as outras permanecem seguras.</p>
+                        </div>
+                    </div>
+
+                    <h4>O que NUNCA fazer</h4>
+                    <ul class="detailed-list warning-list">
+                        <li>Usar informações pessoais (nome, data de nascimento, nome de pets)</li>
+                        <li>Reutilizar senhas em múltiplos sites</li>
+                        <li>Usar palavras do dicionário ou sequências óbvias</li>
+                        <li>Compartilhar senhas por e-mail ou mensagem</li>
+                        <li>Anotar senhas em papel ou arquivos não criptografados</li>
+                        <li>Usar a mesma senha com pequenas variações (senha1, senha2)</li>
+                    </ul>
+
+                    <h4>Gerenciadores de Senhas</h4>
+                    <p>São ferramentas essenciais que armazenam todas as suas senhas de forma criptografada. Você só precisa lembrar de uma senha mestra.</p>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h5>Vantagens</h5>
+                            <ul>
+                                <li>Gera senhas fortes automaticamente</li>
+                                <li>Preenche senhas automaticamente</li>
+                                <li>Sincroniza entre dispositivos</li>
+                                <li>Alerta sobre senhas fracas ou reutilizadas</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h5>Opções Populares</h5>
+                            <ul>
+                                <li>1Password</li>
+                                <li>Bitwarden (código aberto)</li>
+                                <li>LastPass</li>
+                                <li>Dashlane</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2FA Detalhado -->
+            <div class="detailed-concept">
+                <div class="detailed-concept-header">
+                    <div class="detailed-icon">📱</div>
+                    <h3>Autenticação de Dois Fatores (2FA) em Detalhes</h3>
+                </div>
+                <div class="detailed-content">
+                    <h4>Como Funciona?</h4>
+                    <p>A 2FA adiciona uma segunda camada de verificação além da senha. Mesmo que alguém descubra sua senha, não conseguirá acessar sua conta sem o segundo fator.</p>
+
+                    <h4>Tipos de 2FA</h4>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h5>SMS (Menos Seguro)</h5>
+                            <p>Código enviado por mensagem de texto. Vulnerável a ataques de SIM swap, mas melhor que nada.</p>
+                        </div>
+                        <div class="info-box">
+                            <h5>Aplicativos Autenticadores (Recomendado)</h5>
+                            <p>Apps como Google Authenticator, Authy ou Microsoft Authenticator geram códigos temporários. Mais seguro que SMS.</p>
+                        </div>
+                        <div class="info-box">
+                            <h5>Chaves de Segurança (Mais Seguro)</h5>
+                            <p>Dispositivos físicos USB (YubiKey, Titan) que você conecta ao computador. Proteção máxima contra phishing.</p>
+                        </div>
+                        <div class="info-box">
+                            <h5>Biometria</h5>
+                            <p>Impressão digital, reconhecimento facial ou de voz. Conveniente, mas deve ser combinado com outros métodos.</p>
+                        </div>
+                    </div>
+
+                    <h4>Onde Ativar 2FA Prioritariamente</h4>
+                    <ul class="detailed-list">
+                        <li><strong>E-mail:</strong> Sua conta de e-mail é a chave para recuperar outras contas</li>
+                        <li><strong>Bancos e Finanças:</strong> Proteção contra fraudes financeiras</li>
+                        <li><strong>Redes Sociais:</strong> Evita sequestro de contas</li>
+                        <li><strong>Armazenamento em Nuvem:</strong> Protege seus arquivos pessoais</li>
+                        <li><strong>Trabalho:</strong> Protege dados corporativos sensíveis</li>
+                    </ul>
+
+                    <h4>Códigos de Backup</h4>
+                    <p>Ao ativar 2FA, você recebe códigos de backup. Guarde-os em local seguro (gerenciador de senhas ou cofre físico). Eles permitem acesso se você perder o dispositivo 2FA.</p>
+                </div>
+            </div>
+
+            <!-- Phishing Detalhado -->
+            <div class="detailed-concept">
+                <div class="detailed-concept-header">
+                    <div class="detailed-icon">🎣</div>
+                    <h3>Phishing em Detalhes</h3>
+                </div>
+                <div class="detailed-content">
+                    <h4>Como Identificar Tentativas de Phishing</h4>
+                    <div class="info-grid">
+                        <div class="info-box warning-box">
+                            <h5>Sinais de Alerta</h5>
+                            <ul>
+                                <li>Urgência excessiva ("Sua conta será bloqueada!")</li>
+                                <li>Erros de ortografia e gramática</li>
+                                <li>Remetente desconhecido ou suspeito</li>
+                                <li>Links que não correspondem ao site oficial</li>
+                                <li>Solicitação de informações sensíveis</li>
+                                <li>Ofertas boas demais para ser verdade</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h5>Como Verificar</h5>
+                            <ul>
+                                <li>Passe o mouse sobre links (sem clicar) para ver o destino real</li>
+                                <li>Verifique o domínio do remetente</li>
+                                <li>Entre no site digitando o endereço manualmente</li>
+                                <li>Ligue para a empresa usando número oficial</li>
+                                <li>Verifique certificado SSL (cadeado no navegador)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h4>Tipos de Phishing</h4>
+                    <ul class="detailed-list">
+                        <li><strong>E-mail Phishing:</strong> E-mails falsos de bancos, empresas ou serviços</li>
+                        <li><strong>Spear Phishing:</strong> Ataques direcionados a pessoas específicas com informações personalizadas</li>
+                        <li><strong>Whaling:</strong> Phishing direcionado a executivos e pessoas importantes</li>
+                        <li><strong>Smishing:</strong> Phishing por SMS</li>
+                        <li><strong>Vishing:</strong> Phishing por telefone (ligações falsas)</li>
+                        <li><strong>Clone Phishing:</strong> Cópia de e-mails legítimos com links maliciosos</li>
+                    </ul>
+
+                    <h4>O que fazer se cair em Phishing</h4>
+                    <div class="action-steps">
+                        <div class="step">
+                            <span class="step-number">1</span>
+                            <p><strong>Mude suas senhas imediatamente</strong> - Comece pela conta comprometida e depois outras importantes</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <p><strong>Ative 2FA</strong> - Se ainda não tiver, ative em todas as contas</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <p><strong>Verifique atividades suspeitas</strong> - Cheque transações bancárias e acessos recentes</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">4</span>
+                            <p><strong>Notifique a empresa</strong> - Reporte o phishing para a empresa que foi falsificada</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">5</span>
+                            <p><strong>Escaneie seu dispositivo</strong> - Use antivírus para verificar malware</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Backup Detalhado -->
+            <div class="detailed-concept">
+                <div class="detailed-concept-header">
+                    <div class="detailed-icon">💾</div>
+                    <h3>Backup em Detalhes</h3>
+                </div>
+                <div class="detailed-content">
+                    <h4>A Regra 3-2-1 de Backup</h4>
+                    <div class="backup-rule">
+                        <div class="rule-item">
+                            <div class="rule-number">3</div>
+                            <p><strong>3 cópias dos dados</strong><br>Original + 2 backups</p>
+                        </div>
+                        <div class="rule-item">
+                            <div class="rule-number">2</div>
+                            <p><strong>2 tipos de mídia diferentes</strong><br>Ex: HD externo + nuvem</p>
+                        </div>
+                        <div class="rule-item">
+                            <div class="rule-number">1</div>
+                            <p><strong>1 cópia fora do local</strong><br>Proteção contra desastres físicos</p>
+                        </div>
+                    </div>
+
+                    <h4>Tipos de Backup</h4>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h5>Backup Completo</h5>
+                            <p>Copia todos os arquivos. Mais lento e ocupa mais espaço, mas recuperação é mais rápida e simples.</p>
+                        </div>
+                        <div class="info-box">
+                            <h5>Backup Incremental</h5>
+                            <p>Copia apenas arquivos modificados desde o último backup. Rápido e econômico, mas recuperação é mais complexa.</p>
+                        </div>
+                        <div class="info-box">
+                            <h5>Backup Diferencial</h5>
+                            <p>Copia arquivos modificados desde o último backup completo. Meio-termo entre completo e incremental.</p>
+                        </div>
+                    </div>
+
+                    <h4>Soluções de Backup</h4>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h5>Backup Local</h5>
+                            <ul>
+                                <li>HD externo</li>
+                                <li>NAS (Network Attached Storage)</li>
+                                <li>Pen drives (para arquivos pequenos)</li>
+                            </ul>
+                            <p><strong>Vantagens:</strong> Rápido, controle total<br><strong>Desvantagens:</strong> Vulnerável a desastres físicos</p>
+                        </div>
+                        <div class="info-box">
+                            <h5>Backup em Nuvem</h5>
+                            <ul>
+                                <li>Google Drive</li>
+                                <li>Dropbox</li>
+                                <li>OneDrive</li>
+                                <li>Backblaze</li>
+                            </ul>
+                            <p><strong>Vantagens:</strong> Acesso remoto, proteção contra desastres<br><strong>Desvantagens:</strong> Depende de internet, custos mensais</p>
+                        </div>
+                    </div>
+
+                    <h4>Boas Práticas de Backup</h4>
+                    <ul class="detailed-list">
+                        <li><strong>Automatize:</strong> Configure backups automáticos para não esquecer</li>
+                        <li><strong>Teste regularmente:</strong> Verifique se consegue restaurar os dados</li>
+                        <li><strong>Criptografe:</strong> Proteja backups com senha, especialmente na nuvem</li>
+                        <li><strong>Versione:</strong> Mantenha múltiplas versões de arquivos importantes</li>
+                        <li><strong>Documente:</strong> Anote o que está em cada backup e como restaurar</li>
+                        <li><strong>Frequência:</strong> Dados críticos diariamente, outros semanalmente</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Malware Detalhado -->
+            <div class="detailed-concept">
+                <div class="detailed-concept-header">
+                    <div class="detailed-icon">🦠</div>
+                    <h3>Malware em Detalhes</h3>
+                </div>
+                <div class="detailed-content">
+                    <h4>Tipos de Malware</h4>
+                    <div class="info-grid">
+                        <div class="info-box warning-box">
+                            <h5>Vírus</h5>
+                            <p>Se anexa a arquivos legítimos e se replica quando executado. Pode corromper ou deletar dados.</p>
+                        </div>
+                        <div class="info-box warning-box">
+                            <h5>Ransomware</h5>
+                            <p>Criptografa seus arquivos e exige pagamento para liberá-los. Muito perigoso e em crescimento.</p>
+                        </div>
+                        <div class="info-box warning-box">
+                            <h5>Spyware</h5>
+                            <p>Monitora suas atividades secretamente, roubando senhas, dados bancários e informações pessoais.</p>
+                        </div>
+                        <div class="info-box warning-box">
+                            <h5>Trojan</h5>
+                            <p>Se disfarça como software legítimo, mas executa ações maliciosas em segundo plano.</p>
+                        </div>
+                        <div class="info-box warning-box">
+                            <h5>Adware</h5>
+                            <p>Exibe anúncios indesejados e pode rastrear hábitos de navegação.</p>
+                        </div>
+                        <div class="info-box warning-box">
+                            <h5>Rootkit</h5>
+                            <p>Obtém acesso privilegiado ao sistema e se esconde de detecção. Muito difícil de remover.</p>
+                        </div>
+                    </div>
+
+                    <h4>Como se Proteger</h4>
+                    <div class="protection-grid">
+                        <div class="protection-item">
+                            <h5>Prevenção</h5>
+                            <ul>
+                                <li>Mantenha sistema operacional atualizado</li>
+                                <li>Use antivírus confiável e atualizado</li>
+                                <li>Não baixe arquivos de fontes desconhecidas</li>
+                                <li>Cuidado com anexos de e-mail</li>
+                                <li>Use firewall ativo</li>
+                                <li>Evite sites suspeitos</li>
+                            </ul>
+                        </div>
+                        <div class="protection-item">
+                            <h5>Detecção</h5>
+                            <ul>
+                                <li>Computador lento sem motivo aparente</li>
+                                <li>Pop-ups excessivos</li>
+                                <li>Programas desconhecidos instalados</li>
+                                <li>Arquivos desaparecendo ou corrompidos</li>
+                                <li>Atividade de rede suspeita</li>
+                                <li>Antivírus desativado sozinho</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h4>O que fazer se infectado</h4>
+                    <div class="action-steps">
+                        <div class="step">
+                            <span class="step-number">1</span>
+                            <p><strong>Desconecte da internet</strong> - Evita que o malware se comunique com servidores externos</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">2</span>
+                            <p><strong>Entre em modo seguro</strong> - Impede que o malware seja carregado automaticamente</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <p><strong>Execute antivírus completo</strong> - Use ferramentas de remoção especializadas se necessário</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">4</span>
+                            <p><strong>Mude todas as senhas</strong> - De um dispositivo limpo, altere senhas de contas importantes</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">5</span>
+                            <p><strong>Restaure de backup</strong> - Se necessário, formate e restaure de backup limpo</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-number">6</span>
+                            <p><strong>Monitore contas</strong> - Fique atento a atividades suspeitas em bancos e serviços</p>
+                        </div>
+                    </div>
+
+                    <h4>Ferramentas Recomendadas</h4>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h5>Antivírus</h5>
+                            <ul>
+                                <li>Windows Defender (gratuito, integrado)</li>
+                                <li>Malwarebytes</li>
+                                <li>Bitdefender</li>
+                                <li>Kaspersky</li>
+                            </ul>
+                        </div>
+                        <div class="info-box">
+                            <h5>Remoção Especializada</h5>
+                            <ul>
+                                <li>Malwarebytes Anti-Malware</li>
+                                <li>HitmanPro</li>
+                                <li>Kaspersky Rescue Disk</li>
+                                <li>Norton Power Eraser</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Practices Section -->
+    <section id="practices" class="practices">
+        <div class="container">
+            <div class="section-header">
+                <h2>Boas Práticas de Segurança</h2>
+                <p>Ações simples que fazem grande diferença na proteção dos seus dados</p>
+            </div>
+            <div class="practices-grid">
+                <div class="practice-category">
+                    <h3>Para Usuários</h3>
+                    <ul class="practice-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Use senhas fortes e únicas para cada conta</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Ative a autenticação de dois fatores sempre que possível</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Mantenha sistemas e aplicativos sempre atualizados</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Desconfie de e-mails e mensagens suspeitas</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Faça backups regulares dos seus dados importantes</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Use redes Wi-Fi públicas com cautela (prefira VPN)</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Verifique URLs antes de clicar em links</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Instale e mantenha um antivírus atualizado</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="practice-category">
+                    <h3>Para Empresas</h3>
+                    <ul class="practice-list">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Implemente políticas de segurança claras e documentadas</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Treine funcionários regularmente sobre segurança</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Use criptografia para dados sensíveis</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Implemente controle de acesso baseado em funções</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Realize auditorias de segurança periódicas</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Mantenha backups seguros e testados</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Monitore sistemas em busca de atividades suspeitas</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Esteja em conformidade com LGPD e outras regulamentações</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Glossary Section -->
+    <section id="glossary" class="glossary">
+        <div class="container">
+            <div class="section-header">
+                <h2>📖 Glossário - Termos explicados de forma simples</h2>
+                <p>Não entendeu algum termo técnico? Aqui está a explicação em linguagem clara!</p>
+            </div>
+            
+            <div class="glossary-grid">
+                <div class="glossary-term">
+                    <h4>Antivírus</h4>
+                    <p>Programa que protege seu computador contra vírus e outros programas maliciosos. É como um guarda de segurança digital.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Autenticação</h4>
+                    <p>Processo de provar que você é realmente você. Como mostrar RG para entrar em algum lugar, mas no mundo digital.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Criptografia Ponta-a-Ponta</h4>
+                    <p>Quando uma mensagem é "trancada" no seu celular e só "destrancada" no celular de quem recebe. Nem a empresa do app consegue ler.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Firewall</h4>
+                    <p>Barreira de proteção que controla o que entra e sai do seu computador pela internet. Como um porteiro que decide quem pode entrar.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>HTTPS</h4>
+                    <p>Versão segura de sites (veja o cadeado na barra do navegador). Significa que a conexão entre você e o site está protegida.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>LGPD</h4>
+                    <p>Lei Geral de Proteção de Dados. Lei brasileira que obriga empresas a protegerem seus dados pessoais e te dá direitos sobre eles.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Nuvem</h4>
+                    <p>Não é uma nuvem de verdade! São computadores gigantes de empresas (Google, Microsoft) onde você guarda arquivos pela internet.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Ransomware</h4>
+                    <p>Vírus que "sequestra" seus arquivos e pede dinheiro para devolvê-los. Por isso backup é tão importante!</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>SSL/TLS</h4>
+                    <p>Tecnologia que criptografa a conexão entre você e sites. É o que faz aparecer o cadeado verde no navegador.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Token</h4>
+                    <p>Código temporário usado para provar sua identidade. Como aqueles números que o banco envia por SMS.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>VPN</h4>
+                    <p>Virtual Private Network. Cria um "túnel secreto" na internet para proteger sua navegação, especialmente em Wi-Fi público.</p>
+                </div>
+                
+                <div class="glossary-term">
+                    <h4>Zero-Day</h4>
+                    <p>Falha de segurança que nem a empresa que fez o programa sabe que existe. Hackers podem explorar antes de ser corrigida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <span class="logo-text">SecureData</span>
+                    </div>
+                    <p>Todo mundo usa internet, mas nem todos sabem como se proteger. 
+                      Este site foi criado para ensinar de forma acessível e ajudar qualquer pessoa — independentemente do nível de conhecimento — a navegar com mais segurança.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#start-here">Comece Aqui</a></li>
+                        <li><a href="#concepts">Conceitos</a></li>
+                        <li><a href="#practices">Boas Práticas</a></li>
+                        <li><a href="#glossary">Glossário</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rafaela Iracet</p>
+                <p class="footer-credit">Desenvolvido com foco em educação acessível e simples sobre Segurança de Dados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
